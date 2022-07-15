@@ -1,0 +1,42 @@
+{
+  "name": "@zouloux/ecma-core",
+  "version": "0.1.0",
+  "description": "Isomorphic 0-dependency typed core functions for Node and browser.",
+  "main": "./dist/index.es2017.cjs",
+  "module": "./dist/index.es2020.mjs",
+  "unpkg": "./dist/index.es2017.min.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "reset": "rm -rf node_modules && npm i",
+    "clean": "rm -rf dist",
+    "build": "tsbundle build",
+    "publish": "tsbundle publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zouloux/ecma-core.git"
+  },
+  "keywords": [
+    "dom",
+    "library"
+  ],
+  "author": "Alexis Bouhet - ZoulouX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zouloux/ecma-core/issues"
+  },
+  "homepage": "https://github.com/zouloux/ecma-core#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@zouloux/tsbundle": "^1.2.17"
+  },
+  "tsbundle": {
+    "files": [
+      {
+        "output": "./dist/",
+        "input": "./src/index.ts",
+        "exportBits": true
+      }
+    ]
+  }
+}
