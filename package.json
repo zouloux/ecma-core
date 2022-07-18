@@ -1,8 +1,8 @@
 {
   "name": "@zouloux/ecma-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Isomorphic 0-dependency typed core functions for Node and browser.",
-  "main": "./dist/index.es2017.cjs",
+  "main": "./dist/index.es2019.cjs",
   "module": "./dist/index.es2020.mjs",
   "unpkg": "./dist/index.es2017.min.js",
   "types": "./dist/index.d.ts",
