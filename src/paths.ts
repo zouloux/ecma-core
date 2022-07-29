@@ -4,8 +4,7 @@
  * Will return full string if no slash found.
  * ex : 'usr/bin/TestFile' will return 'TestFile'
  */
-export function getFileFromPath (path:string):string
-{
+export function getFileFromPath (path:string):string {
 	let lastIndex = path.lastIndexOf('/');
 	if ( lastIndex == -1 ) lastIndex = 0;
 	return path.substring( lastIndex + 1, path.length );
@@ -17,8 +16,7 @@ export function getFileFromPath (path:string):string
  * Will return full string if no slash found.
  * ex: 'usr/bin/TestFile' will return 'usr/bin/'
  */
-export function getBaseFromPath (path:string):string
-{
+export function getBaseFromPath (path:string):string {
 	let lastIndex = path.lastIndexOf('/');
 	if ( lastIndex == -1 ) lastIndex = path.length;
 	return path.substring(0, lastIndex);
@@ -32,11 +30,9 @@ export function getBaseFromPath (path:string):string
  * No error thrown.
  * If you want starting slash or not, please use StringUtils.trailingSlash method on path and / or pBase
  */
-export function extractPathFromBase (path:string, base:string):string
-{
+export function extractPathFromBase (path:string, base:string):string {
 	// Get the index of base within the path
 	let baseStartIndex = path.indexOf( base );
-
 	return (
 		// Base is starting path so its ok
 		baseStartIndex == 0
@@ -64,8 +60,7 @@ export function removeExtensions (path:string, extensionLevelToRemove = 1) {
  * Ex : 'a-folder/' -> []
  * @param fileName File name only, not full path.
  */
-export function extractExtensions (fileName:string):string[]
-{
+export function extractExtensions (fileName:string):string[] {
 	let parts = fileName.split('.')
 	parts.shift()
 	return parts.reverse()

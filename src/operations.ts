@@ -1,38 +1,43 @@
+// ----------------------------------------------------------------------------- TYPES
+
+/**
+ * Any low level handler type matcher
+ * - Any type of return or void
+ * - Any number of arguments of any type
+ */
+export type AnyHandler = (...rest) => any|void
 
 // ----------------------------------------------------------------------------- NOOP
 
-export const noop = () => {};
+/**
+ * I do nothing 🏖
+ */
+export const noop:AnyHandler = () => {};
 
 // ----------------------------------------------------------------------------- COMPARE
 
-export type TCompareOperators = ('==='|'=='|'!=='|'!='|'>='|'>'|'<='|'<');
+export type TCompareOperators = '===' | '==' | '!==' | '!=' | '>=' | '>' | '<=' | '<';
 
-export function compareWithOperator ( operandA, operandB, operator:TCompareOperators )
-{
+/**
+ * Compare two values with a string based operator.
+ * @see TCompareOperators
+ */
+export function compareWithOperator ( operandA:any, operandB:any, operator:TCompareOperators ) {
 	if ( operator == '===' )
 		return operandA === operandB;
-
 	else if ( operator == '==' )
 		return operandA == operandB;
-
 	else if ( operator == '!==' )
 		return operandA !== operandB;
-
 	else if ( operator == '!=' )
 		return operandA != operandB;
-
 	else if ( operator == '>=' )
 		return operandA >= operandB;
-
 	else if ( operator == '>' )
 		return operandA > operandB;
-
 	else if ( operator == '<=' )
 		return operandA >= operandB;
-
 	else if ( operator == '<' )
 		return operandA < operandB;
-
-	else
-		return false
+	return false
 }

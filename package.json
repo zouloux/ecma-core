@@ -1,9 +1,9 @@
 {
   "name": "@zouloux/ecma-core",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Isomorphic 0-dependency typed core functions for Node and browser.",
   "main": "./dist/index.es2019.cjs",
-  "module": "./dist/index.es2020.mjs",
+  "module": "./dist/index.es2022.mjs",
   "unpkg": "./dist/index.es2017.min.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -28,14 +28,68 @@
   "homepage": "https://github.com/zouloux/ecma-core#readme",
   "devDependencies": {
     "@types/node": "^18.0.3",
-    "@zouloux/tsbundle": "^1.2.17"
+    "@zouloux/tsbundle": "^1.2.20"
   },
   "tsbundle": {
+    "output": "./dist/",
+    "exportBits": true,
     "files": [
       {
-        "output": "./dist/",
-        "input": "./src/index.ts",
-        "exportBits": true
+        "input": "./src/index.ts"
+      },
+      {
+        "formats": [
+          "es2017.min.js"
+        ],
+        "generateTypeDefinitions": false,
+        "input": "./src/numbers.ts",
+        "outName": "numbers",
+        "filterGlob": "numbers.*"
+      },
+      {
+        "formats": [
+          "es2017.min.js"
+        ],
+        "generateTypeDefinitions": false,
+        "input": "./src/operations.ts",
+        "outName": "operations",
+        "filterGlob": "operations.*"
+      },
+      {
+        "formats": [
+          "es2017.min.js"
+        ],
+        "generateTypeDefinitions": false,
+        "input": "./src/paths.ts",
+        "outName": "paths",
+        "filterGlob": "paths.*"
+      },
+      {
+        "formats": [
+          "es2017.min.js"
+        ],
+        "generateTypeDefinitions": false,
+        "input": "./src/strings.ts",
+        "outName": "strings",
+        "filterGlob": "strings.*"
+      },
+      {
+        "formats": [
+          "es2017.min.js"
+        ],
+        "generateTypeDefinitions": false,
+        "input": "./src/structs.ts",
+        "outName": "structs",
+        "filterGlob": "structs.*"
+      },
+      {
+        "formats": [
+          "es2017.min.js"
+        ],
+        "generateTypeDefinitions": false,
+        "input": "./src/time.ts",
+        "outName": "time",
+        "filterGlob": "time.*"
       }
     ]
   }
