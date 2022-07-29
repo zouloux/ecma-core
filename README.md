@@ -335,3 +335,11 @@ type ScalarRecord = Record<string, ScalarValue>
 ## Unpk
 
 Libraries are available on UNPKG
+
+- [Whole lib](https://unpkg.com/@zouloux/ecma-core) ![](./bits/index.es2017.min.js.svg)
+- [numbers only](https://unpkg.com/@zouloux/ecma-core/dist/numbers.es2017.min.js) ![](./bits/numbers.es2017.min.js.svg)
+- [operations only](https://unpkg.com/@zouloux/ecma-core/dist/operations.es2017.min.js) ![](./bits/operations.es2017.min.js.svg)
+- [paths only](https://unpkg.com/@zouloux/ecma-core/dist/paths.es2017.min.js) ![](./bits/paths.es2017.min.js.svg)
+- [strings only](https://unpkg.com/@zouloux/ecma-core/dist/strings.es2017.min.js) ![](./bits/strings.es2017.min.js.svg)
+- [structs only](https://unpkg.com/@zouloux/ecma-core/dist/structs.es2017.min.js) ![](./bits/structs.es2017.min.js.svg)
+- [time only](https://unpkg.com/@zouloux/ecma-core/dist/time.es2017.min.js) ![](./bits/time.es2017.min.js.svg)
