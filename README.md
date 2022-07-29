@@ -2,7 +2,7 @@
 
 Ecma-Core is an __Isomorphic__ and __0-dependency__ typed core functions for __Node__ and __browser__.
 
-Library size is min+gzip is about ![](./bits/index.es2017.min.js.svg).
+Library size is about ![](./bits/index.es2017.min.js.svg).
 
 No Browser or Node specific code in this lib ! Only __isomorphic__ helpers.
 
@@ -40,7 +40,7 @@ const { toHex, limitRange } = require( "@zouloux/ecma-core" )
 ## Operations
 
 #### No-op
-> No-op is a do nothing handler, typed like any handler `(...rest) => any` for compatibility
+> No-op is a do nothing handler, typed like any handler `(...rest) => any|void` for compatibility
 ```tsx
 addEventListener("click", noop) // do nothing
 ```
