@@ -18,7 +18,7 @@ No Browser or Node specific code in this lib ! Only __isomorphic__ helpers.
   - <a href="#structs">Structs</a>
   - <a href="#time">Time</a>
   - <a href="#some-types">Some types</a>
-- <a href="#unpk">Unpkg usage</a>
+- <a href="#unpkg">Unpkg usage</a>
 ---
 
 ## Usage
@@ -153,7 +153,7 @@ functionalValueMap( valueMap )
 
 ---
 
-## Path
+## Paths
 > Isomorphic path utils without having to import browserified "path" in the browser.
 ```tsx
 getFileFromPath("./dir/dir/file.ext"); // file.ext
@@ -311,7 +311,7 @@ const string = testUntab();
 ```
 
 ---
-## Struct
+## Structs
 
 ```tsx
 forceArray("ok") // ["ok"]
