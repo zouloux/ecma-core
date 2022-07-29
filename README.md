@@ -9,7 +9,7 @@ No Browser or Node specific code in this lib ! Only __isomorphic__ helpers.
 ---
 
 ## Table of contents
-- <a href="#install">Install</a>
+- <a href="#usage">Usage</a>
 - List of available helpers
   - <a href="#operations">Operations</a>
   - <a href="#numbers">Numbers</a>
@@ -21,8 +21,8 @@ No Browser or Node specific code in this lib ! Only __isomorphic__ helpers.
 - <a href="#unpk">Unpkg usage</a>
 ---
 
-## Install
-
+## Usage
+Install
 ```bash
 npm i @zouloux/ecma-core
 ```
