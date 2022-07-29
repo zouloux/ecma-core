@@ -1,21 +1,40 @@
 # ecma-core
 
-Isomorphic __0-dependency__ typed core functions for __Node__ and __browser__.
+Ecma-Core is an __Isomorphic__ and __0-dependency__ typed core functions for __Node__ and __browser__.
+
+Library size is min+gzip is about ![](./bits/index.es2017.min.js.svg).
 
 No Browser or Node specific code in this lib ! Only __isomorphic__ helpers.
-
 
 ---
 
 ## Table of contents
-- <a href="#operations">Operations</a>
-- <a href="#numbers">Numbers</a>
-- <a href="#paths">Paths</a>
-- <a href="#strings">Strings</a>
-- <a href="#structs">Structs</a>
-- <a href="#time">Time</a>
-- <a href="#some-types">Some types</a>
-- <a href="#unpk">Unpkg</a>
+- <a href="#install">Install</a>
+- List of available helpers
+  - <a href="#operations">Operations</a>
+  - <a href="#numbers">Numbers</a>
+  - <a href="#paths">Paths</a>
+  - <a href="#strings">Strings</a>
+  - <a href="#structs">Structs</a>
+  - <a href="#time">Time</a>
+  - <a href="#some-types">Some types</a>
+- <a href="#unpk">Unpkg usage</a>
+---
+
+## Install
+
+```bash
+npm i @zouloux/ecma-core
+```
+Module import
+```tsx
+import { toHex, limitRange } from "@zouloux/ecma-core"
+```
+CommonJS import
+```tsx
+const { toHex, limitRange } = require( "@zouloux/ecma-core" )
+```
+
 ---
 
 ## Operations
@@ -332,9 +351,14 @@ type ScalarRecord = Record<string, ScalarValue>
 ```
 
 ---
-## Unpk
+## Unpkg
 
-Libraries are available on UNPKG
+Helpers are available on UNPKG.
+Import it with a script tag to use it in the browser.
+Specify version for better performances (will not check last version at each request).
+```html
+<script src="https://unpkg.com/@zouloux/ecma-core@0.2.0"></script>
+```
 
 - [Whole lib](https://unpkg.com/@zouloux/ecma-core) ![](./bits/index.es2017.min.js.svg)
 - [numbers only](https://unpkg.com/@zouloux/ecma-core/dist/numbers.es2017.min.js) ![](./bits/numbers.es2017.min.js.svg)
