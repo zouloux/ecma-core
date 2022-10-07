@@ -318,6 +318,11 @@ forceArray("ok") // ["ok"]
 forceArray(["ok"]) // ["ok"]
 ```
 
+```tsx
+arrayFrom(4).map( i => console.log(i) ) // 0, 1, 2, 3
+arrayFrom(4, i => i * 2 ).map( i => console.log(i) ) // 0, 2, 4, 6
+````
+
 ---
 ## Time
 
