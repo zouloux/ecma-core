@@ -3,13 +3,21 @@ import { ScalarRecord } from "./structs";
 // ----------------------------------------------------------------------------- CHECK
 
 /**
- * Check if a string represent a number, and a number only.
+ * Check if a string represent strictly a number, and a number only.
+ * ARE NUMBERS :
+ * "12", "-2", "0", ".6", "0.12, " 40 ", "10e14"
+ * ARE NOT NUMBERS :
+ * "20px", "30%", "gre8t"
  * NaN and Infinity will be false.
  * @param number The string representing the number
  * @returns True if the string is representing a number.
  */
 export function isNumber ( number:string ):boolean {
-	const f = parseFloat( number );
+	// We use this hack to cast the string to a number
+	// Because parseFloat and parseInt will allow strings like "OK9" to be
+	// converted to the number 9.
+	// We want strict check, for routing purpose by example.
+	const f = +number;
 	return !isNaN( f ) && isFinite( f );
 }
 
