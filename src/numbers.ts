@@ -125,9 +125,14 @@ export const limitAngle = ( angle:number ):number =>
 // ----------------------------------------------------------------------------- RANDOM
 
 /**
- * Random positive number from 0 to max
+ * Random positive integer from 0 to max
  */
-export const randomPositive = ( max:number ) => ~~(Math.random() * max)
+export const randomPositiveInt = ( max:number ) => ~~(Math.random() * max)
+
+/**
+ * Random integer between min to max
+ */
+export const randomInt = ( min:number, max:number ) => Math.round( randomRange(min, max ) )
 
 /**
  * Random number between min and max
